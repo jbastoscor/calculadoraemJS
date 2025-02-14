@@ -1,0 +1,68 @@
+body {
+  background-color: #d3d3d3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.calculator {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* box-shadow quer dizer sombra e tem 4 parâmetros: 1. posição horizontal, 2. posição vertical, 3. desfoque, 4. cor, rgba é a cor com transparência */
+  width: 300px;
+}
+
+.diplay {
+  margin-bottom: 20px;
+}
+
+#result {
+  width: 90%;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  font-size: 2em;
+  color: #333;
+  background-color: #e0e0e0;
+  box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+button {
+  background-color: #fff;
+  border: none;
+  padding: 20px;
+  font-size: 1.5em;
+  color: #333;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s;
+}
+
+button:hover {
+  background-color: #e0e0e0
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+button.operator {
+  background-color: #333;
+  color: #fff;
+}
+
+button.clean {
+  background-color: #e60000;
+  color: #fff;
+}
