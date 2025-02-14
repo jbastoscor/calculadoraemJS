@@ -1,43 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">  
+  <link rel="stylesheet" href="style.css">
   <title>Calculadora 🧮 </title>
 </head>
 
 <body>
-  
-<div class = "calculator"> <!-- class está na div porque é um container que tem os elementos da calculadora -->
-  <div class = "display">
-  <input type="text" id="result" value = "0" readonly> 
+
+  <div class="calculator"> <!-- class está na div porque é um container que tem os elementos da calculadora -->
+    <div class="display"> <!--serve p exibir os números digitados e os resultados-->
+      <input type="text" id="result" value="0"> <!-- input do tipo texto que tem o id result e o valor inicial é 0 e readonly para não ser possível digitar no display -->
+    </div>
+
+    <div class="buttons">
+      <button onclick="appendValue('7')">7</button> <!-- botão que chama a função appendValue() passando o parâmetro '7' que é o número 7 -->
+      <button onclick="appendValue('8')">8</button>
+      <button onclick="appendValue('9')">9</button>
+      <button class="operator" onclick="appendValue('+')">+</button>
+
+      <button onclick="appendValue('4')">4</button> <!-- botão que chama a função appendValue() passando o parâmetro '4' que é o número 4 -->
+      <button onclick="appendValue('5')">5</button>
+      <button onclick="appendValue('6')">6</button>
+      <button class="operator" onclick="appendValue('-')">-</button> <!-- appendValue é uma função que recebe um parâmetro e adiciona esse valor ao display , no caso o parâmetro é o operador de subtração -->
+
+      <button onclick="appendValue('1')">1</button> <!-- botão que chama a função appendValue() passando o parâmetro '1' que é o número 1 -->
+      <button onclick="appendValue('2')">2</button>
+      <button onclick="appendValue('3')">3</button>
+      <button class="operator" onclick="appendValue('*')">*</button> <!-- operador é usado em class pois é um botão que tem uma função diferente dos outros botões, pois é um operador matemático -->
+      <button class="clear" onclick="clearResult()">C</button> <!-- botão que chama a função clearDisplay() que limpa o display -->
+      <button onclick="appendValue('0')">0</button> <!-- botão que chama a função appendValue() passando o parâmetro '0' que é o número 0 -->
+
+      <button class="operator" id="getResult" onclick="calculateResult()"> = </button>
+      <button class="operator" onclick="appendValue('/')">/</button>
+    </div>
   </div>
-
-<div class = "buttons"> 
-  <button onclick = "appendValue('7')">7</button> <!-- botão que chama a função appendValue() passando o parâmetro '7' que é o número 7 -->
-  <button onclick = "appendValue('8')">8</button> <!-- botão que chama a função appendValue() passando o parâmetro '8' que é o número 8 -->
-  <button onclick = "appendValue('9')">9</button> <!-- botão que chama a função appendValue() passando o parâmetro '9' que é o número 9 -->
-  <button class = "operator" onclick = "appendValue('+')">+</button>
-
-  <button onclick = "appendValue('4')">4</button> <!-- botão que chama a função appendValue() passando o parâmetro '4' que é o número 4 -->
-  <button onclick = "appendValue('5')">5</button> <!-- botão que chama a função appendValue() passando o parâmetro '5' que é o número 5 -->
-  <button onclick = "appendValue('6')">6</button> <!-- botão que chama a função appendValue() passando o parâmetro '6' que é o número 6 -->
-  <button class = "operator" onclick = "appendValue('-')">-</button> 
-
-  <button onclick = "appendValue('1')">1</button> <!-- botão que chama a função appendValue() passando o parâmetro '1' que é o número 1 -->
-  <button onclick = "appendValue('2')">2</button> <!-- botão que chama a função appendValue() passando o parâmetro '2' que é o número 2 -->
-  <button onclick = "appendValue('3')">3</button> <!-- botão que chama a função appendValue() passando o parâmetro '3' que é o número 3 -->
-  <button class = "operator" onclick = "appendValue('*')">*</button>
-  <button class = "clear" onclick="clearResult()">C</button> <!-- botão que chama a função clearDisplay() que limpa o display -->
-  <button onclick = "appendValue('0')">0</button> <!-- botão que chama a função appendValue() passando o parâmetro '0' que é o número 0 -->
-
-  <button class = "operator" onclick = "calculateResult()" > = </button>
-  <button class = "operator" onclick = "appendValue('/')">/</button>
-</div>
-</div> 
 
 
 </body>
 <script src="script.js"></script>
+
 </html>
